@@ -1,6 +1,13 @@
 # Template Parts
 
-templ-arts is a fork of github's template-parts library.
+*templ-arts is a fork of github's template-parts template instantiation polyfill library.*
+
+*It enhances what that library (currently) supports.  So far with only one additional feature:*
+
+1.  *It supports nested paths within the expression, e.g. {{prop.subProp}}*
+
+
+
 
 This library is designed as a "ponyfill" library that implements the design in the [TemplateInstance proposed whatwg spec][spec] that has been proposed in order to address [whatwg/html#2254](https://github.com/whatwg/html/issues/2254).
 
