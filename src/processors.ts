@@ -12,8 +12,14 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
     processCallback(_: TemplateInstance, parts: Iterable<TemplatePart>, params: unknown): void {
       if (typeof params !== 'object' || !params) return
       for (const part of parts) {
-        if (part.expression in params) {
-          const value = (params as Record<string, unknown>)[part.expression] ?? ''
+        const splitExpression = part.expression.split('.');
+        if (splitExpression[0] in params) {
+          let value = params as any;
+          for(const token of splitExpression){
+            value = value[token] ?? '';
+            if(value === '') break;
+          }
+          //const value = [part.expression] ?? ''
           processPart(part, value)
         }
       }
