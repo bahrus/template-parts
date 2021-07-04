@@ -1,14 +1,14 @@
 {
   "name": "templ-arts",
-  "version": "0.3.2",
+  "version": "0.0.0",
   "description": "An implementation of the TemplateInstance proposal (https://github.com/w3c/webcomponents/blob/159b1600bab02fe9cd794825440a98537d53b389/proposals/Template-Instantiation.md)",
   "homepage": "https://github.com/w3c/webcomponents/blob/159b1600bab02fe9cd794825440a98537d53b389/proposals/Template-Instantiation.md",
   "bugs": {
-    "url": "https://github.com/github/template-parts/issues"
+    "url": "https://github.com/bahrus/template-parts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github/template-parts.git"
+    "url": "git+https://github.com/bahrus/template-parts.git"
   },
   "license": "MIT",
   "author": "GitHub Inc.",

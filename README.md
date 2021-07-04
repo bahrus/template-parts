@@ -1,5 +1,7 @@
 # Template Parts
 
+templ-arts is a fork of github's template-parts library.
+
 This library is designed as a "ponyfill" library that implements the design in the [TemplateInstance proposed whatwg spec][spec] that has been proposed in order to address [whatwg/html#2254](https://github.com/whatwg/html/issues/2254).
 
 [spec]: https://github.com/w3c/webcomponents/blob/159b1600bab02fe9cd794825440a98537d53b389/proposals/Template-Instantiation.md
