@@ -5,7 +5,7 @@
 *It enhances what that library (currently) supports.  So far with only one additional feature:*
 
 1.  *It supports nested paths within the expression, e.g. {{prop.subProp}}*
-
+2.  *It supports default expressions if the (nested) path is undefined, e.g. {{prop.subProp ?? my default text}}*
 
 
 
