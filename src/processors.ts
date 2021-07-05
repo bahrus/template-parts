@@ -25,6 +25,8 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
             value = (splitByDefault.length === 2) ? splitByDefault[1] : '';
           }
           processPart(part, value)
+        }else if(splitByDefault.length === 2){
+          processPart(part, splitByDefault[1]);
         }
       }
     }
