@@ -12,7 +12,7 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
     processCallback(_: TemplateInstance, parts: Iterable<TemplatePart>, params: unknown): void {
       if (typeof params !== 'object' || !params) return
       for (const part of parts) {
-        const splitByDefault = part.expression.split('??');
+        const splitByDefault = part.expression.split('??').map(s => s.trim());
 
         const splitExpression = splitByDefault[0].split('.');
         if (splitExpression[0] in params) {
