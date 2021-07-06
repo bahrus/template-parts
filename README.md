@@ -7,7 +7,7 @@
 1.  *It supports nested paths within the expression, e.g. {{prop.subProp}}*
 2.  *It supports default expressions if the (nested) path is undefined, e.g. {{prop.subProp ?? my default text}}*
 
-
+*[TODO] Make 2 use quotes for constant string, to allow for alternate path?*
 
 This library is designed as a "ponyfill" library that implements the design in the [TemplateInstance proposed whatwg spec][spec] that has been proposed in order to address [whatwg/html#2254](https://github.com/whatwg/html/issues/2254).
 
