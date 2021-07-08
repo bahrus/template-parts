@@ -26,7 +26,7 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
               const q = ['\'', '"'];
               const sbd1 = splitByDefault[1];
               if(q.includes(sbd1[0]) && q.includes(sbd1[sbd1.length - 1])){
-                value = sbd1.substring(1, sbd1.length - 2);
+                value = sbd1.substring(1, sbd1.length - 1);
               }else{
                 throw 'Not yet implemented';
               }
@@ -40,7 +40,7 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
           const q = ['\'', '"'];
           const sbd1 = splitByDefault[1];
           if(q.includes(sbd1[0]) && q.includes(sbd1[sbd1.length - 1])){
-                const value = sbd1.substring(1, sbd1.length - 2);
+                const value = sbd1.substring(1, sbd1.length - 1);
                 processPart(part, value);
           }else{
             throw 'Not yet implemented';
