@@ -37,7 +37,17 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
           }
           processPart(part, value)
         }else if(splitByDefault.length === 2){
-          processPart(part, splitByDefault[1]);
+          const q = ['\'', '"'];
+          const sbd1 = splitByDefault[1];
+          if(q.includes(sbd1[0]) && q.includes(sbd1[sbd1.length - 1])){
+                const value = sbd1.substring(1, sbd1.length - 2);
+                processPart(part, value);
+          }else{
+            throw 'Not yet implemented';
+          }
+          
+        }else{
+          processPart(part, '');
         }
       }
     }
