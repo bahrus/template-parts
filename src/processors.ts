@@ -22,6 +22,17 @@ export function createProcessor(processPart: PartProcessor): TemplateTypeInit {
             if(value === undefined) break;
           }
           if(value === undefined){
+            if(splitByDefault.length === 2){
+              const q = ['\'', '"'];
+              const sbd1 = splitByDefault[1];
+              if(q.includes(sbd1[0]) && q.includes(sbd1[sbd1.length - 1])){
+                value = sbd1.substring(1, sbd1.length - 2);
+              }else{
+                throw 'Not yet implemented';
+              }
+            }else{
+              value = '';
+            }
             value = (splitByDefault.length === 2) ? splitByDefault[1] : '';
           }
           processPart(part, value)
